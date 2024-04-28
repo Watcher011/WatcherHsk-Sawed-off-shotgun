@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  
+    <ThingDef ParentName="BaseGun_LongBarreled">
+        <defName>Gun_SawedOff_shotgun</defName>
+        <label>Обрез двустволки</label>
+        <description>Это обрез двухствольного дробовика под патрон 12 калибра. Несмотря на непрезентабельный внешний вид, в ближнем бою это оружие неожиданно эффективно — при нажатии на спусковой крючок стреляют оба ствола, и противник получает двойную дозу свинцовой дроби и огромные повреждения. Но это единственное достоинство данного оружия — оно быстро ломается, нуждается в перезарядке после каждого выстрела, а высокий разброс дроби делает его абсолютно бесполезным в дистанционном бою. Поэтому из него лучше всего стрелять пулевыми патронами, так как они хорошо уменьшают разброс тем самым не рассеивая урон куда попало.</description>
+        <graphicData>
+            <texPath>Things/Weapons/shotgunsmal</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <MarketValue>600</MarketValue>
+            <SightsEfficiency>0.7</SightsEfficiency>
+            <ShotSpread>0.3</ShotSpread>
+            <SwayFactor>2.5</SwayFactor>
+            <RangedWeapon_Cooldown>0.26</RangedWeapon_Cooldown>
+            <Bulk>4.5</Bulk>
+            <Mass>1.5</Mass>
+        </statBases>
+        <weaponTags>
+            <li>ST1</li>
+            <li>Gun</li>
+            <li>TierOnePistol</li>
+			<li>CE_Sidearm</li>
+			<li>CE_AI_AssaultWeapon</li>
+			<li>CE_OneHandedWeapon</li>
+        </weaponTags>
+        <thingCategories>
+            <li>Shotguns</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                <warmupTime>0.2</warmupTime>
+                <range>9</range>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+                <soundCast>shotgun</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_FireModes">
+               <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>2</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>2</magazineSize>
+				<reloadOneAtATime>true</reloadOneAtATime>
+                <reloadTime>0.6</reloadTime>
+                <ammoSet>AmmoSet_12Gauge</ammoSet>
+            </li>
+        </comps>
+		<modExtensions>
+		  <li Class="CombatExtended.GunDrawExtension">
+			<DrawSize>0.8</DrawSize>
+		  </li>
+		</modExtensions>
+        <smeltProducts>
+            <Shotgun_Component>1</Shotgun_Component>
+            <Weapon_Parts>1</Weapon_Parts>
+        </smeltProducts>
+    </ThingDef>
+	
+	 <ThingDef ParentName="BaseGun_LongBarreled">
+        <defName>Gun_SawedOff_shotgunbig</defName>
+        <label>Охотничий дробовик</label>
+        <description>Двуствольное охотничье ружьё лёгкого типа с низкой посадкой стволов, предназначенное для промысловой и любительской охоты.</description>
+        <graphicData>
+            <texPath>Things/Weapons/shotgunbig</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <MarketValue>600</MarketValue>
+            <SightsEfficiency>0.95</SightsEfficiency>
+            <ShotSpread>0.18</ShotSpread>
+            <SwayFactor>1.92</SwayFactor>
+            <RangedWeapon_Cooldown>0.26</RangedWeapon_Cooldown>
+            <Bulk>6.5</Bulk>
+            <Mass>2.5</Mass>
+        </statBases>
+        <weaponTags>
+            <li>ST1</li>
+            <li>Gun</li>
+            <li>TierOnePistol</li>
+			<li>CE_AI_AssaultWeapon</li>
+        </weaponTags>
+        <thingCategories>
+            <li>Shotguns</li>
+        </thingCategories>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+                <warmupTime>0.4</warmupTime>
+                <range>18</range>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+                <soundCast>shotgun</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_FireModes">
+               <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>2</aimedBurstShotCount>
+            </li>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>2</magazineSize>
+				<reloadOneAtATime>true</reloadOneAtATime>
+                <reloadTime>0.6</reloadTime>
+                <ammoSet>AmmoSet_12Gauge</ammoSet>
+            </li>
+        </comps>
+		<modExtensions>
+		  <li Class="CombatExtended.GunDrawExtension">
+			<DrawSize>1.2</DrawSize>
+		  </li>
+		</modExtensions>
+        <smeltProducts>
+            <Shotgun_Component>1</Shotgun_Component>
+            <Weapon_Parts>1</Weapon_Parts>
+        </smeltProducts>
+    </ThingDef>
+</Defs>
